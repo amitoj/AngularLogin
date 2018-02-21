@@ -1,0 +1,36 @@
+<div class="vertical-nav">
+  <div class="row">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="collapse navbar-collapse left-0" id="menu">
+        <ul class="nav nav-tabs-justified nav-stacked text-uppercase">
+          <li>
+            <a class="navbar-collapse bg-primary" data-toggle="collapse" aria-expanded="false" data-target="#tm-submenu">
+              <span i18n>Terminal Management</span>
+
+              <i class="glyphicon glyphicon-chevron-right pull-right icon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down pull-right icon-chevron-right"></i>
+            </a>
+            <ul class="collapse nav nav-stacked " id="tm-submenu">
+              <li><a [routerLink]="['./addterminal']"><span class="nav_item"><span class="left-10" i18n>Create Terminal</span></span></a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="navbar-collapse bg-primary" data-toggle="collapse" aria-expanded="false" data-target="#mm-submenu">
+              <span i18n>Merchant Management</span>
+
+              <i class="glyphicon glyphicon-chevron-right pull-right icon-chevron-right"></i>
+              <i class="glyphicon glyphicon-chevron-down pull-right icon-chevron-right"></i>
+            </a>
+            <ul class="collapse nav nav-stacked " id="mm-submenu">
+              <li><a [routerLink]="['./addmerchant']"><span class="nav_item"><span class="left-10" i18n>Create Merchant</span></span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="config-content">
+  <router-outlet></router-outlet>
+</div>

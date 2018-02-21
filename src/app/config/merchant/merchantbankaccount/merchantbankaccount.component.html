@@ -1,0 +1,65 @@
+<div class="panel-body" [formGroup]="merchantBind">
+  <div class="form-group">
+    <div class="col-lg-5">
+      <label for="system id" i18n>System ID</label>
+      <input name="sysId" type="text" class="form-control" formControlName="systemId">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="merchant id" i18n>Merchant ID</label>
+      <input name="merchantId" type="text" class="form-control" formControlName="merchantId">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="acc type" i18n>Account Type</label>
+      <select name="accountType" class="form-control" formControlName="accountType">
+        <option>C</option>
+        <option>S</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label for="acc name" i18n>Account Name</label>
+      <input name="accountName" type="text" class="form-control" formControlName="accountName">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="acc num" i18n>Account Number</label>
+      <input name="accountNumber" type="text" class="form-control" formControlName="accountNumber">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="bank name" i18n>Bank Name</label>
+      <input name="bankName" type="text" class="form-control" formControlName="bankName">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="branch name" i18n>Branch Name</label>
+      <input name="branchName" type="text" class="form-control"  formControlName="branchName">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="branch code" i18n>Branch Code</label>
+      <input name="branchCode" type="text" class="form-control"  formControlName="branchCode">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="ifsc code" i18n>IFSC Code</label>
+      <input name="ifsc" type="text" class="form-control"  formControlName="IFSCCode">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="cust id" i18n>Customer ID</label>
+      <input name="customerId" type="text" class="form-control"  formControlName="customerID">
+    </div>
+
+    <div class="col-lg-5">
+      <label for="upi" i18n>UPI Address</label>
+      <input name="upi" type="text" class="form-control"  formControlName="UPIAddress">
+    </div>
+    <div class="col-lg-5">
+      <label>&nbsp;</label>
+      <button type="submit" class="form-control btn btn-info col-md-2" i18n>Submit</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<ul class="nav nav-tabs nav-tabs-responsive">
+  <li [ngClass]="{active: tabService.isSelected(1)}">
+    <a (click)="tabService.selected(1)" data-toggle="tab" i18n>Merchant Category Code Master</a>
+  </li>
+  <li [ngClass]="{active: tabService.isSelected(2)}">
+    <a (click)="tabService.selected(2)" data-toggle="tab" i18n>Country Currency Master</a>
+  </li>
+  <li [ngClass]="{active: tabService.isSelected(3)}">
+    <a (click)="tabService.selected(3)" data-toggle="tab" i18n>Merchant Master</a>
+  </li>
+  <li [ngClass]="{active: tabService.isSelected(4)}">
+    <a (click)="tabService.selected(4)" data-toggle="tab" i18n>Merchant Paymode</a>
+  </li>
+  <li [ngClass]="{active: tabService.isSelected(5)}">
+    <a (click)="tabService.selected(5)" data-toggle="tab" i18n>Merchant Bank Account</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <form [formGroup]="merchantData" (ngSubmit)="onSubmit()">
+    <div class="tab-pane" [ngClass]="{active: tabService.isSelected(1)}" *ngIf="tabService.isSelected(1)">
+      <merchant-category-code-master [tabs]="tabService" [merchantBind]="merchantData" [merchantControls]="merchantData.controls">
+
+      </merchant-category-code-master>
+    </div>
+    <div class="tab-pane"[ngClass]="{active: tabService.isSelected(2)}" *ngIf="tabService.isSelected(2)">
+      <country-currency-master [tabs]="tabService" [merchantBind]="merchantData" [merchantControls]="merchantData.controls">
+
+      </country-currency-master>
+    </div>
+    <div class="tab-pane"[ngClass]="{active: tabService.isSelected(3)}" *ngIf="tabService.isSelected(3)">
+      <merchant-master [tabs]="tabService" [merchantBind]="merchantData" [merchantControls]="merchantData.controls">
+
+      </merchant-master>
+    </div>
+    <div class="tab-pane"[ngClass]="{active: tabService.isSelected(4)}" *ngIf="tabService.isSelected(4)">
+      <merchant-paymode [tabs]="tabService" [merchantBind]="merchantData" [merchantControls]="merchantData.controls">
+
+      </merchant-paymode>
+    </div>
+    <div class="tab-pane"[ngClass]="{active: tabService.isSelected(5)}" *ngIf="tabService.isSelected(5)">
+      <merchant-bankaccount [merchantBind]="merchantData" [merchantControls]="merchantData.controls">
+
+      </merchant-bankaccount>
+    </div>
+  </form>
+</div>

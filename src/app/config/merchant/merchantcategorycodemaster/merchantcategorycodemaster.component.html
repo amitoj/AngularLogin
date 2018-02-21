@@ -1,0 +1,35 @@
+<div class="panel-body" [formGroup]="merchantBind">
+  <div class="form-group">
+    <div class="col-lg-5">
+      <label  i18n="@@fieldLableMCC">MCC</label>
+      <input name="mcc" type="text" class="form-control" formControlName="MCC">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n="@@fieldLableDesc">Description</label>
+      <input name="desc" type="text" class="form-control" formControlName="description">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n="@@fieldLableStatusM">Status</label>
+      <select name="status" class="form-control" formControlName="status">
+        <option value="A">A(Active)</option>
+        <option value="I">I(Inactive)</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Creation Date</label>
+      <input type="date" class="form-control">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Created By</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-lg-5">
+      <label>&nbsp;</label>
+      <button type="button" class="form-control btn btn-info col-md-2" (click)="tabs.incrementTab()" i18n>Next</button>
+    </div>
+  </div>
+</div>

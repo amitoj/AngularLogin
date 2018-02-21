@@ -1,0 +1,36 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerMenu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a routerLink="" class="navbar-brand">PayFree</a>
+    </div>
+    <div class="collapse navbar-collapse" id="headerMenu">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a [routerLink]="['']" i18n="@@homeLink">Home</a></li>
+        <li><a [routerLink]="['/products']" i18n="@@prodLink">Products</a></li>
+        <li><a [routerLink]="['/doc']" i18n="@@docLink">Documentation</a></li>
+        <li><a [routerLink]="['/downloads']" i18n="@@downloadLink">Downloads</a></li>
+        <li><a [routerLink]="['/config']" i18n="@@configLink">Configurations</a></li>
+        <li><a [routerLink]="['/contact']" i18n="@@contactLink">Contacts Us</a></li>
+        <li><a [routerLink]="['/about']" i18n="@@aboutLink">About Us</a></li>
+        <li class="top-right"><a (click)="logout()"  i18n="@@logoutLink">LogOut</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a><b>{{date| date: 'dd/MM/yyyy,h:mm:ss'}}</b></a></li>
+        <!--<li>
+          <select [(ngModel)]="selectedValue">
+            <option *ngFor="let lang of languages" value="{{lang.code}}">{{lang.label}}</option>
+          </select>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

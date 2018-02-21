@@ -1,0 +1,55 @@
+.vertical-nav{
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left:0;
+}
+.bg-primary{
+  border-radius: 0;
+}
+.bg-primary:hover{
+  background: #337ab7;
+  color: #ffffff;
+  cursor: pointer;
+}
+.config-content{
+  float: right;
+  padding: 10px;
+}
+.vertical-nav::-webkit-scrollbar{
+  width: .4em;
+}
+.vertical-nav::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.vertical-nav::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+a[aria-expanded=true] .glyphicon-chevron-right {
+  display: none;
+}
+a[aria-expanded=false] .glyphicon-chevron-down {
+  display: none;
+}
+.left-10{
+  margin-left: 25px;
+}
+@media only screen and (min-width: 768px ){
+  .vertical-nav{
+    width: 250px;
+  }
+  .config-content{
+    width: calc(100% - 250px);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .vertical-nav{
+    width: 60px;
+  }
+  .config-content{
+    width: calc(100% - 60px);
+  }
+}

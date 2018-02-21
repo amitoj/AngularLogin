@@ -1,0 +1,99 @@
+<div class="panel-body" [formGroup]="merchantBind">
+  <div class="form-group">
+    <div class="col-lg-5">
+      <label i18n>Bussiness Description</label>
+      <input name="bussinessDesc" type="text" class="form-control" formControlName="bussinessDesciption">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Merchant Type</label>
+      <select name="merchanType" class="form-control" formControlName="merchantType">
+        <option value="POS">POS</option>
+        <option value="MPOS">MPOS</option>
+        <option value="PG">PG</option>
+        <option value="WT">WT</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>MCC</label>
+      <input name="mcc" type="text" class="form-control" formControlName="MCC">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Participant ID</label>
+      <input name="participantId" type="text" class="form-control" formControlName="participantID">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Settlement Currency</label>
+      <select name="settlementCurrency" class="form-control" formControlName="settlementCurrency">
+        <option value="USD">USD</option>
+        <option value="INR">INR</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Cards Allowed Flag</label>
+      <select name="cardsAllowedFlag" class="form-control" formControlName="cardsAllowedFlag">
+        <option value="A">A(All)</option>
+        <option value="D">D(Domestic)</option>
+        <option value="I"> I(International)</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Assign Commission ID</label>
+      <input name="aci" type="text" class="form-control" formControlName="assignCommissionID">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Surcharge Flag</label>
+      <input name="surchargeFlag" type="text" class="form-control" formControlName="surchargeFlag">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Surcharge Amount</label>
+      <input name="surchargeAmount" type="text" class="form-control" formControlName="surchargeAmount">
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Payment Hold Release Flag</label>
+      <select name="phrf" class="form-control" formControlName="paymentHoldReleaseFlag">
+        <option value="E">E</option>
+        <option value="D">D</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>DCC Flag</label>
+      <select name="dcc" class="form-control" formControlName="DCCFlag">
+        <option value="E">E</option>
+        <option value="D">D</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Report Flag</label>
+      <select name="reportFlag" class="form-control" formControlName="reportFlag">
+        <option value="DA">DA</option>
+        <option value="WE">WE</option>
+        <option value="QA">QA</option>
+        <option value="YR">YR</option>
+        <option value="D">D(Disable)</option>
+      </select>
+    </div>
+
+    <div class="col-lg-5">
+      <label i18n>Portal Access</label>
+      <select name="portalAccess" class="form-control" formControlName="portalAccess">
+        <option value="E">E</option>
+        <option value="D">D</option>
+      </select>
+    </div>
+    <div class="col-lg-5">
+      <label>&nbsp;</label>
+      <button type="button" class="form-control btn btn-info col-md-2" (click)="tabs.incrementTab()" i18n>Next</button>
+    </div>
+  </div>
+</div>

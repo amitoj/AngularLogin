@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="align-center col-md-5">
+    <div class="form-group alert alert-danger" align="center" [hidden]="error===null">
+      {{error}}
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-user"></i></span>
+          <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" formControlName="username">
+        </div>
+        <div *ngIf="loginForm.controls['username'].hasError('minlength')" class="alert alert-danger">
+          Username Should has minimum 6 characters
+        </div>
+        <div *ngIf="loginForm.controls['username'].hasError('maxlength')" class="alert alert-danger">
+          Username should not Exceed 16 characters
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon" for="pwd"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="{{hidePassword.hide ? 'password':'text'}}" class="form-control" placeholder="Password" id="pwd" formControlName="password">
+          <span class="input-group-addon" for="pwd" (click)="hidePassword.changeClass()"><i class="glyphicon" [ngClass]="hidePassword.getClass()"></i></span>
+        </div>
+        <div *ngIf="loginForm.controls['password'].hasError('minLength')" class="alert alert-danger">
+          Password Should be more than 8 Characters.
+        </div>
+        <div *ngIf="loginForm.controls['password'].hasError('maxLength')" class="alert alert-danger">
+          Password Should Not Exceed 15 Characters.
+        </div>
+        <div *ngIf="loginForm.controls['password'].hasError('pattern')" class="alert alert-danger">
+          Password Should contain at least 1 Upper Case, 1 Lower Case, 1 Number and 1 Special Character (! @ # $ ^ *).
+        </div>
+      </div>
+      <div align="form-group">
+        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary col-md-12" i18n>Login</button>
+      </div>
+      <div class="top-10 form-group">
+        <div class="col-md-12 text-center">
+          <a routerLink="/forgetPassword" id="lostmemory" i18n>Forget Password<i class="glyphicon glyphicon-question-sign"></i></a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
